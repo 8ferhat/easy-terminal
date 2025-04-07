@@ -1,7 +1,3 @@
-Sure! Here's a nicely formatted README file for Git based on your provided information:
-
----
-
 # Terminal Customization Guide
 
 This repository provides a set of aliases, functions, and configurations to enhance your terminal experience. By applying these settings, you'll streamline common tasks, improve Git integration, and optimize your overall workflow.
