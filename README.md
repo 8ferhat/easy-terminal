@@ -1,14 +1,10 @@
-###################### 
-#====================#
-#  easy-terminal     #
-#     by             #
-#       8ferhat      #
-######################
+#  easy-terminal     
+#     by             
+#       8ferhat      
 
-
-# =======================================================
+# ============================
 #  Aliases for common commands
-# =======================================================
+# ============================
 alias ll='ls -lAh'             # long listing with human-readable file sizes
 alias la='ls -A'               # list all except . and ..
 alias l='ls -lh'               # list files with human-readable sizes
