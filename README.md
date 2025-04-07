@@ -108,7 +108,7 @@ Executes fastfetch when starting the terminal
 fastfetch
 
 for Ubuntu/Ubuntu based distros:
-sudo apt install fastfetch
+''' sudo apt install fastfetch '''
 
 for Arch/Arch based distros:
 sudo pacman -S fastfetch
