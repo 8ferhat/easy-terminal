@@ -114,7 +114,7 @@ For a less complicated terminal experience, copy the contents of this configurat
 
 To apply the configurations to your terminal, follow these steps:
 
-1. Copy the contents of this file.
+1. Copy the contents of the bashrc file in this repo.
 2. Open your `.bashrc` file (typically located at `~/.bashrc`).
 3. Paste the copied content at the end of the `.bashrc` file.
 4. Run `source ~/.bashrc` to apply the changes immediately.
