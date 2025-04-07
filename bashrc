@@ -18,8 +18,7 @@ alias h='history'              # easy way to access history
 
 # Explanation:
 # These aliases make your shell experience more efficient by shortening common commands.
-# For instance, `ll` gives a detailed file listing with human-readable sizes,
-# and `grep` will always show search results with color.
+# For instance, `ll` gives a detailed file listing with human-readable sizes.
 
 
 
