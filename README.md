@@ -1,4 +1,4 @@
-#  easy-terminal by 8ferhat      
+#  easy-terminal      
 
 
 
@@ -57,30 +57,28 @@ shopt -s histappend                         # Append to the history file instead
 
 
 
-# =======================================================
+
 #  Add Custom Directories to $PATH
-# =======================================================
 export PATH=$HOME/bin:$PATH
 
 # Explanation:
-# This adds `$HOME/bin` to your `$PATH`, so any executable scripts you put there will be available globally.
+This adds `$HOME/bin` to your `$PATH`, so any executable scripts you put there will be available globally.
 
 
 
 
-# =======================================================
+
 #  Terminal Behavior Enhancements
-# =======================================================
 shopt -s checkwinsize   # Automatically adjust the window size after each command
 
 # Explanation:
-# `checkwinsize` ensures the terminal window size is updated correctly, especially when resizing the terminal.
+`checkwinsize` ensures the terminal window size is updated correctly, especially when resizing the terminal.
 
 
 
-# =======================================================
+
 #  Custom Functions
-# =======================================================
+
 
 # Create and cd into a directory
 mkcd() { mkdir -p "$1" && cd "$1"; }
@@ -92,28 +90,33 @@ sysinfo() { echo "System Information:"; uname -a; echo "Memory Usage:"; free -h;
 git_status() { git status --short --branch; }
 
 # Explanation:
-# `mkcd` creates a directory and immediately navigates into it.
-# `sysinfo` displays system info like the kernel version and memory usage.
-# `git_status` displays a condensed view of your current Git repository's status.
+`mkcd` creates a directory and immediately navigates into it.
+`sysinfo` displays system info like the kernel version and memory usage.
+`git_status` displays a condensed view of your current Git repository's status.
 
 
 
-# =======================================================
-#  Make sure the terminal behaves as expected
-# =======================================================
-shopt -s checkwinsize   # Refresh terminal window size after each command
-export HISTCONTROL=ignoreboth  # Ignore duplicate commands and blank lines
+#  Adds fastfetch to terminal when opening
 
-
-
-# ========================================
-#  adds fastfetch to terminal when opening
-# ========================================
 fastfetch
 
 # Explanation:
-# Executes fastfetch when starting the terminal 
+Executes fastfetch when starting the terminal 
 
 
+# What alse you need besides copying my file:
+fastfetch
+
+for Ubuntu/Ubuntu based distros:
+sudo apt install fastfetch
+
+for Arch/Arch based distros:
+sudo pacman -S fastfetch
+
+for Fedora:
+sudo dnf install fastfetch
+
+If you also want a less complicated terminal experiece, just copy my bashrc file into your .bashrc file which is usually located under:
+/home/usr/.bashrc
 
 Have a less complicated experience in the terminal!
