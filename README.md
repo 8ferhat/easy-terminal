@@ -15,39 +15,17 @@ alias ...='cd ../..'           # shortcut to navigate up two directories
 
 alias h='history'              # easy way to access history
 
-# Explanation:
-# These aliases make your shell experience more efficient by shortening common commands.
-# For instance, `ll` gives a detailed file listing with human-readable sizes,
-# and `grep` will always show search results with color.
-
-
-
-# =======================================================
-#  Enable auto-completion for `cd`
-# =======================================================
-shopt -s autocd
 
 # Explanation:
-# The `autocd` option allows you to change directories simply by typing their name, without needing `cd`.
+These aliases make your shell experience more efficient by shortening common commands.
+For instance, `ll` gives a detailed file listing with human-readable sizes.
 
 
 
-# =======================================================
-#  Programmable Completion (if available)
-# =======================================================
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
 
-# Explanation:
-# This loads system-wide bash completions for commands, improving your experience with tools like `git`, `docker`, etc.
-# It gives you suggestions and tab completions for many commands.
-
-
-
-# =======================================================
+# ==========================
 #  Git Integration in Prompt
-# =======================================================
+# ==========================
 parse_git_branch() {
     git branch 2>/dev/null | sed -n '/\*/s/\* \(.*\)/ (\1)/p'
 }
@@ -60,18 +38,21 @@ export PS1='[\u@\h \W$(parse_git_branch)]\$ '  # User@host current_directory (gi
 
 
 
-# =======================================================
+# ===================
 #  History Management
-# =======================================================
+# ===================
 export HISTCONTROL=ignoredups:ignorespace   # Ignore duplicate commands and commands starting with space
+
 export HISTSIZE=10000                        # Store 10,000 commands in memory
+
 export HISTFILESIZE=10000                    # Store 10,000 commands in the history file
+
 shopt -s histappend                         # Append to the history file instead of overwriting
 
 # Explanation:
-# `HISTCONTROL` prevents duplicate and unnecessary entries from being stored in history.
-# `HISTSIZE` and `HISTFILESIZE` control the number of commands that are stored in memory and in the `.bash_history` file.
-# `histappend` makes sure history is added to the end instead of overwriting.
+`HISTCONTROL` prevents duplicate and unnecessary entries from being stored in history.
+`HISTSIZE` and `HISTFILESIZE` control the number of commands that are stored in memory and in the `.bash_history` file.
+`histappend` makes sure history is added to the end instead of overwriting.
 
 
 
