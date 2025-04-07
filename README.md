@@ -112,10 +112,10 @@ for Ubuntu/Ubuntu based distros:
 
 
 for Arch/Arch based distros:
-sudo pacman -S fastfetch
+`sudo pacman -S fastfetch`
 
 for Fedora:
-sudo dnf install fastfetch
+`sudo dnf install fastfetch`
 
 If you also want a less complicated terminal experiece, just copy my bashrc file into your .bashrc file which is usually located under:
 /home/usr/.bashrc
