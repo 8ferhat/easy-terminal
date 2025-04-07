@@ -1,8 +1,9 @@
 #  easy-terminal by 8ferhat      
 
-# ============================
+
+
+
 #  Aliases for common commands
-# ============================
 alias ll='ls -lAh'             # long listing with human-readable file sizes
 
 alias la='ls -A'               # list all except . and ..
@@ -23,24 +24,22 @@ For instance, `ll` gives a detailed file listing with human-readable sizes.
 
 
 
-# ==========================
 #  Git Integration in Prompt
-# ==========================
 parse_git_branch() {
     git branch 2>/dev/null | sed -n '/\*/s/\* \(.*\)/ (\1)/p'
 }
 export PS1='[\u@\h \W$(parse_git_branch)]\$ '  # User@host current_directory (git_branch)
 
+
 # Explanation:
-# `parse_git_branch` shows the current Git branch. 
-# For example, if you're inside a git repo, the prompt might look like `user@hostname current_folder (master)$`.
-# This might be useful for Git users who need to be aware of their Git status.
+`parse_git_branch` shows the current Git branch. 
+For example, if you're inside a git repo, the prompt might look like `user@hostname current_folder (master)$`.
+This might be useful for Git users who need to be aware of their Git status.
 
 
 
-# ===================
+
 #  History Management
-# ===================
 export HISTCONTROL=ignoredups:ignorespace   # Ignore duplicate commands and commands starting with space
 
 export HISTSIZE=10000                        # Store 10,000 commands in memory
@@ -49,10 +48,12 @@ export HISTFILESIZE=10000                    # Store 10,000 commands in the hist
 
 shopt -s histappend                         # Append to the history file instead of overwriting
 
+
 # Explanation:
 `HISTCONTROL` prevents duplicate and unnecessary entries from being stored in history.
 `HISTSIZE` and `HISTFILESIZE` control the number of commands that are stored in memory and in the `.bash_history` file.
 `histappend` makes sure history is added to the end instead of overwriting.
+
 
 
 
@@ -63,6 +64,7 @@ export PATH=$HOME/bin:$PATH
 
 # Explanation:
 # This adds `$HOME/bin` to your `$PATH`, so any executable scripts you put there will be available globally.
+
 
 
 
