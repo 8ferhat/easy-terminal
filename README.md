@@ -1,15 +1,18 @@
-#  easy-terminal     
-#     by             
-#       8ferhat      
+#  easy-terminal by 8ferhat      
 
 # ============================
 #  Aliases for common commands
 # ============================
 alias ll='ls -lAh'             # long listing with human-readable file sizes
+
 alias la='ls -A'               # list all except . and ..
+
 alias l='ls -lh'               # list files with human-readable sizes
+
 alias ..='cd ..'               # shortcut to navigate up one directory
+
 alias ...='cd ../..'           # shortcut to navigate up two directories
+
 alias h='history'              # easy way to access history
 
 # Explanation:
